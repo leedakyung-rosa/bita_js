@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리배치도(풀이)</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h1,
+        table {
+            margin: 50px auto;
+        }
+
+        table,
+        td {
+            text-align: center;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+        }
+    </style>
+
+    <!-- document.addEventListener('DOMContentLoaded', () => {}); -->
+
+</head>
+
+<body>
+    <h1>자리배치도</h1>
+    <!-- table>(tr>td{좌석$}*5)*6 -->
+    <!-- <tr>
+        <td>좌석1</td>
+        <td>좌석2</td>
+        <td>좌석3</td>
+        <td>좌석4</td>
+        <td>좌석5</td>
+    </tr>
+    <tr>
+        <td>좌석1</td>
+        <td>좌석2</td>
+        <td>좌석3</td>
+        <td>좌석4</td>
+        <td>좌석5</td>
+    </tr> -->
+    <script>
+        const inputColmn = prompt('한줄에 몇 명 착석하나요?') || 6;
+        const inputAll = prompt('총인원수는 몇 명인가요?') || 15;
+        let seat = 0;
+        let list = `<table>`;
+        while (seat < inputAll) {
+            list += `<tr>`;
+            for (let i = 0; i < inputColmn; i++) {
+                if (seat < inputAll) {
+                    list += `<td>좌석${++seat}</td>`;
+                } else {
+                    list += '<td></td>';
+                }
+            }
+            list += `</tr>`;
+        }
+        list += `</table>`;
+        document.write(list);
+    </script>
+</body>
+
+</html>
