@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: antiquewhite;
+            margin: 5px 90px;
+            width: 50px;
+            height: 30px;
+            border: 1px solid black;
+            transition: all 1s ease;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>주사위 확률</h2>
+    <span class="label">1이 나온 수</span>
+    <div style="width: 166px;">숫자1</div>
+    <span class="label">2이 나온 수</span>
+    <div style="width: 100;">숫자2</div>
+    <span class="label">3이 나온 수</span>
+    <div style="width: 100;">숫자3</div>
+    <span class="label">4이 나온 수</span>
+    <div style="width: 100;">숫자4</div>
+    <span class="label">5이 나온 수</span>
+    <div style="width: 100;">숫자5</div>
+    <span class="label">6이 나온 수</span>
+    <div style="width: 100;">숫자6</div>
+
+    <script>
+        const inp = + prompt("주사위를 몇 회 던질까요?") || 1000;
+        console.time("연산시간측정");
+        let num1 = 0;
+        let num2 = 0;
+        let num3 = 0;
+        let num4 = 0;
+        let num5 = 0;
+        let num6 = 0;
+        for (let i = 0; i < 1000; i++) {
+            const num = Math.floor(Math.random() * 6) + 1;
+            if (num == 1) {
+                num1 = num1 + 1
+            }
+            if (num == 2) {
+                num2 = num2 + 1
+            }
+            if (num == 3) {
+                num3 = num3 + 1
+            }
+            if (num == 4) {
+                num4 = num4 + 1
+            }
+            if (num == 5) {
+                num5 = num5 + 1
+            }
+            if (num == 6) {
+                num6 = num6 + 1
+            }
+        }
+
+        // const num = Math.floor(Math.random()*45)+1;
+        console.log(num1, num2, num3, num4, num5, num6);
+
+        const divs = document.querySelectorAll("div");
+        const result = [num1, num2, num3, num4, num5, num6];
+
+        divs.forEach((v, i) => {
+            v.style.width = `${result[i]}px`;
+            v.textContent = `${result[i]}`
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 0;
+            padding: 0;
+            background: url("https://t1.daumcdn.net/cfile/tistory/13045F404D7C365D23");
+            width: 155px;
+            height: 154px;
+        }
+
+        .zzi {
+            background-position: -134px, 0;
+            width: 146px;
+            height: 151px;
+        }
+
+
+        .bba {
+            background-position: -274px, 0;
+            width: 164px;
+            height: 154px;
+        }
+    </style>
+    <!-- CDN example (jsDelivr) -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>
+        const now = dayjs();
+        const ms = now.get("ms");
+        const random = ms % 3;
+        if (random == 0) {
+            document.write(`<div class="muk"></div>`);
+        }
+        if (random == 1) {
+            document.write(`<div class="zzi"></div>`);
+        }
+        if (random == 2) {
+            document.write(`<div class="bba"></div>`);
+        }
+        console.log(now);
+    </script>
+</head>
+
+<body></body>
+<div class="bba"></div>
+
+</html>
