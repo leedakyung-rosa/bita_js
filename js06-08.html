@@ -21,14 +21,20 @@
                 infoTitle.forEach((v, i) => {
                     document.write(`<h3>${i + 1} : ${v.innerHTML}</h3>`);
                 });
+
+                infoTitle.forEach((v, i) => {
+                    const h3 = document.createElement('h3');
+                    h3.textContent = `${i + 1} : ${v.innerHTML}`;
+                    document.body.appendChild(h3);
+                });
+
+
             });
 
         // .board-index-img1 > .item ...
     </script>
 </head>
 
-<body>rjwp
-
-</body>
+<body></body>
 
 </html>
