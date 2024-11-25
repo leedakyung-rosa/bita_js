@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1 {
+          color: white;
+          background-color: blue;
+          border-radius: 50%;
+          font-size: 40px;
+          padding: 20px 20px 30px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(50%, 50%);
+        } */
+    </style>
+</head>
+
+<body>
+    <h1
+        style="color: white; background-color: blue; border-radius: 50%; font-size: 40px; padding: 20px 20px 30px; position: absolute; left: 50%; top: 50%; transform: translate(50%, 50%);">
+        ★</h1>
+    <script>
+        const star = document.querySelector("h1");
+        //   star.style.color = "white";
+        //   star.style.backgroundColor = "blue";
+        //   star.style.borderRadius = "50%";
+        //   star.style.fontSize = "40px";
+        //   star.style.padding = "20px 20px 30px";
+        //   star.style.position = "absolute";
+        //   star.style.left = "50%";
+        //   star.style.top = "50%";
+        //   star.style.transform = "translate(50%,50%)";
+        star.style.cssText = `
+        color: white;
+        background-color: blue;
+        border-radius: 50%;
+        font-size: 40px;
+        padding: 20px 20px 30px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(50%, 50%);`;
+    </script>
+
+
+</body>
+
+</html>
